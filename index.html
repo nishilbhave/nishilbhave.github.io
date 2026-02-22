@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishil Bhave | Senior Backend Developer</title>
+    <meta name="description" content="Senior PHP/Laravel Developer with 10.5+ years building scalable web applications, APIs, and backend systems. Founder of StatusLink.">
+
+    <!-- Fonts: Geist Mono (similar to Vercel's font) & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: {
+                            50: '#f9faFB',
+                            100: '#f4f4f5',
+                            200: '#e4e4e7',
+                            300: '#d4d4d8',
+                            400: '#a1a1aa',
+                            500: '#71717a',
+                            600: '#52525b',
+                            700: '#3f3f46',
+                            800: '#27272a',
+                            900: '#18181b', // Main BG
+                            950: '#09090b',
+                        },
+                        accent: {
+                            lime: '#D9F99D', // Lime-200
+                            limeHover: '#BEF264', // Lime-300
+                            purple: '#E9D5FF', // Purple-200
+                        }
+                    },
+                    gridTemplateColumns: {
+                        'bento': 'repeat(auto-fit, minmax(250px, 1fr))',
+                    },
+                    animation: {
+                        'marquee': 'marquee 25s linear infinite',
+                        'spin-slow': 'spin 8s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #09090b;
+            color: #f4f4f5;
+        }
+
+        /* Bento Card Base */
+        .bento-card {
+            background-color: #18181b;
+            border: 1px solid #27272a;
+            border-radius: 1.5rem;
+            /* rounded-3xl */
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bento-card:hover {
+            transform: translateY(-4px);
+            border-color: #3f3f46;
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Hover Reveal Effect (Subtle glow) */
+        .bento-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 40%);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s;
+            pointer-events: none;
+        }
+
+        .bento-card:hover::after {
+            opacity: 1;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #09090b;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 4px;
+        }
+
+        /* Noise Texture */
+        .bg-noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen p-4 md:p-8 flex justify-center items-center">
+
+    <div class="bg-noise"></div>
+
+    <!-- Main Grid Container -->
+    <div class="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 auto-rows-[180px] gap-4">
+
+        <!-- 1. Profile Card (Large: 2x2) -->
+        <div class="bento-card md:col-span-2 md:row-span-2 !p-0 group">
+            <div class="absolute inset-0 bg-gradient-to-b from-dark-800 to-dark-900 z-0"></div>
+            <div class="absolute top-0 right-0 p-8 opacity-20 group-hover:opacity-10 transition-opacity">
+                <svg viewBox="0 0 200 200" class="w-64 h-64 text-white animate-spin-slow">
+                    <path fill="currentColor"
+                        d="M42.7,-62.9C50.9,-52.8,50.1,-34.4,51.7,-19.2C53.4,-4,57.4,8,54,18.7C50.6,29.4,39.8,38.8,29,46.1C18.2,53.4,7.4,58.6,-2.4,61.9C-12.3,65.2,-21.1,66.6,-31.1,60.8C-41.1,55,-52.3,42,-59.6,27.9C-66.9,13.8,-70.3,-1.4,-65.4,-14.8C-60.5,-28.2,-47.4,-39.8,-34.8,-48.5C-22.1,-57.2,-10,-63,2.9,-67C15.8,-71,34.5,-73,42.7,-62.9Z"
+                        transform="translate(100 100)" />
+                </svg>
+            </div>
+
+            <div class="card-content flex flex-col justify-between h-full p-8 z-10">
+                <div class="flex items-start justify-between">
+                    <div class="w-20 h-20 rounded-full border-2 border-dark-700 overflow-hidden bg-dark-800">
+                        <!-- Placeholder Avatar -->
+                        <div
+                            class="w-full h-full bg-gradient-to-br from-dark-700 to-dark-600 flex items-center justify-center text-2xl">
+                            👨‍💻
+                        </div>
+                    </div>
+                    <div
+                        class="px-3 py-1 rounded-full bg-accent-lime/10 border border-accent-lime/20 text-accent-lime text-xs font-mono font-bold uppercase tracking-wider flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-accent-lime animate-pulse"></span>
+                        Open to Work
+                    </div>
+                </div>
+
+                <div>
+                    <h1 class="font-display text-4xl md:text-5xl font-bold text-white mb-2 tracking-tight">Nishil Bhave</h1>
+                    <p class="text-dark-400 text-lg leading-relaxed max-w-md">
+                        Senior PHP/Laravel Developer with 10.5+ years building scalable APIs, ERP platforms, and SaaS products. Currently founder of StatusLink.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Location / Map (1x1) -->
+        <div class="bento-card flex items-center justify-center relative group">
+            <div class="absolute inset-0 bg-dark-800 opacity-50 group-hover:opacity-30 transition-opacity">
+                <!-- Abstract Map Pattern -->
+                <svg class="w-full h-full text-dark-700" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" stroke-width="1" />
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#grid)" />
+                </svg>
+            </div>
+            <div class="card-content text-center">
+                <div
+                    class="w-12 h-12 rounded-full bg-dark-700 flex items-center justify-center mx-auto mb-3 text-2xl shadow-xl">
+                    📍
+                </div>
+                <h3 class="font-bold text-white">Mumbai, India</h3>
+                <p class="text-sm text-dark-400 font-mono">IST</p>
+            </div>
+        </div>
+
+        <!-- 3. Socials: LinkedIn (1x1) -->
+        <a href="https://linkedin.com/in/nishil-bhave" target="_blank" rel="noopener noreferrer"
+            class="bento-card flex flex-col justify-center items-center hover:bg-[#0A66C2]/10 hover:border-[#0A66C2]/30 transition-colors group">
+            <svg class="w-10 h-10 text-dark-400 group-hover:text-[#0A66C2] transition-colors mb-4" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+            <span class="font-bold text-white">nishil-bhave</span>
+            <span class="text-xs text-dark-500">LinkedIn</span>
+        </a>
+
+        <!-- 4. Experience List (Tall: 1x2) -->
+        <div class="bento-card md:row-span-2 overflow-y-auto custom-scrollbar">
+            <div class="card-content">
+                <h3 class="text-xs font-mono uppercase text-dark-500 mb-6 tracking-widest">Experience</h3>
+
+                <div class="space-y-6">
+                    <div class="group">
+                        <div class="text-sm text-dark-500 font-mono mb-1">Jan 2026 — Present</div>
+                        <div class="font-bold text-white group-hover:text-accent-lime transition-colors">Founder &amp; Solo Developer</div>
+                        <div class="text-sm text-dark-400">StatusLink</div>
+                    </div>
+
+                    <div class="w-full h-px bg-dark-800"></div>
+
+                    <div class="group">
+                        <div class="text-sm text-dark-500 font-mono mb-1">Jul 2019 — Jul 2025</div>
+                        <div class="font-bold text-white group-hover:text-accent-lime transition-colors">Senior Backend Developer</div>
+                        <div class="text-sm text-dark-400">Fooddarzee</div>
+                    </div>
+
+                    <div class="w-full h-px bg-dark-800"></div>
+
+                    <div class="group">
+                        <div class="text-sm text-dark-500 font-mono mb-1">Jan 2018 — May 2019</div>
+                        <div class="font-bold text-white group-hover:text-accent-lime transition-colors">Co-Founder &amp; Tech Lead</div>
+                        <div class="text-sm text-dark-400">Frocery</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Tech Stack (Wide: 2x1) -->
+        <div class="bento-card md:col-span-2 flex flex-col justify-center overflow-hidden">
+            <div class="card-content mb-2 px-2">
+                <h3 class="text-xs font-mono uppercase text-dark-500 tracking-widest">The Arsenal</h3>
+            </div>
+
+            <!-- Marquee Container -->
+            <div class="relative flex overflow-x-hidden group">
+                <div class="py-4 animate-marquee whitespace-nowrap flex gap-8 items-center">
+                    <span
+                        class="text-xl font-bold text-dark-400 hover:text-white transition-colors cursor-default">PHP</span>
+                    <span
+                        class="text-xl font-bold text-dark-400 hover:text-white transition-colors cursor-default">Laravel</span>
+                    <span
+                        class="text-xl font-bold text-dark-400 hover:text-white transition-colors cursor-default">Next.js</span>
+                    <span
+                        class="text-xl font-bold text-dark-400 hover:text-white transition-colors cursor-default">MySQL</span>
+                    <span
+                        class="text-xl font-bold text-dark-400 hover:text-white transition-colors cursor-default">AWS</span>
+                    <span
+                        class="text-xl font-bold text-dark-400 hover:text-white transition-colors cursor-default">React</span>
+                    <span
+                        class="text-xl font-bold text-dark-400 hover:text-white transition-colors cursor-default">Supabase</span>
+                    <span
+                        class="text-xl font-bold text-dark-400 hover:text-white transition-colors cursor-default">GitHub Actions</span>
+                    <span
+                        class="text-xl font-bold text-dark-400 hover:text-white transition-colors cursor-default">PostgreSQL</span>
+                    <span
+                        class="text-xl font-bold text-dark-400 hover:text-white transition-colors cursor-default">JavaScript</span>
+                    <!-- Duplicated for smooth loop -->
+                    <span
+                        class="text-xl font-bold text-dark-400 hover:text-white transition-colors cursor-default">PHP</span>
+                    <span
+                        class="text-xl font-bold text-dark-400 hover:text-white transition-colors cursor-default">Laravel</span>
+                    <span
+                        class="text-xl font-bold text-dark-400 hover:text-white transition-colors cursor-default">Next.js</span>
+                    <span
+                        class="text-xl font-bold text-dark-400 hover:text-white transition-colors cursor-default">MySQL</span>
+                    <span
+                        class="text-xl font-bold text-dark-400 hover:text-white transition-colors cursor-default">AWS</span>
+                    <span
+                        class="text-xl font-bold text-dark-400 hover:text-white transition-colors cursor-default">React</span>
+                </div>
+
+                <!-- Fade Edges -->
+                <div class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#18181b] to-transparent z-10"></div>
+                <div class="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#18181b] to-transparent z-10"></div>
+            </div>
+        </div>
+
+        <!-- 6. Project: StatusLink (2x2) -->
+        <a href="https://getstatuslink.com" target="_blank" rel="noopener noreferrer" class="bento-card md:col-span-2 md:row-span-2 !p-0 group relative cursor-pointer">
+            <div class="absolute inset-0 z-0">
+                <!-- Abstract Project BG -->
+                <div
+                    class="w-full h-full bg-gradient-to-br from-indigo-900/40 to-dark-900 group-hover:scale-105 transition-transform duration-700">
+                </div>
+            </div>
+
+            <div class="absolute inset-0 bg-dark-900/60 transition-opacity group-hover:bg-dark-900/40 z-10"></div>
+
+            <div class="card-content flex flex-col justify-end h-full p-8 z-20">
+                <div
+                    class="w-12 h-12 bg-indigo-500 rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">StatusLink</h3>
+                <p class="text-dark-300 line-clamp-2 mb-4">Branded client status pages connected to Trello &amp; Jira — built for agencies to eliminate manual update emails. Next.js + Supabase.</p>
+                <div class="flex items-center text-sm font-bold text-indigo-400 group-hover:text-indigo-300">
+                    Visit StatusLink <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+            </div>
+        </a>
+
+        <!-- 7. Socials: GitHub (1x1) -->
+        <a href="https://github.com/nishil20" target="_blank" rel="noopener noreferrer"
+            class="bento-card flex flex-col justify-center items-center hover:bg-white/5 transition-colors group">
+            <svg class="w-10 h-10 text-dark-400 group-hover:text-white transition-colors mb-4" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                    d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 012.5-.34c.85.04 1.7.15 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z" />
+            </svg>
+            <span class="font-bold text-white">GitHub</span>
+            <span class="text-xs text-dark-500">Open Source</span>
+        </a>
+
+        <!-- 8. Contact / Email (1x1) -->
+        <a href="mailto:nishilbhave@gmail.com"
+            class="bento-card flex flex-col justify-center items-center bg-accent-lime hover:bg-accent-limeHover !border-none group">
+            <div class="p-3 bg-black/10 rounded-full mb-3 group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6 text-dark-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+            </div>
+            <span class="font-bold text-dark-900">Contact Me</span>
+        </a>
+
+        <!-- 9. About Me / LinkedIn CTA (2x1) -->
+        <a href="https://linkedin.com/in/nishil-bhave" target="_blank" rel="noopener noreferrer" class="bento-card md:col-span-2 group">
+            <div class="card-content flex items-center justify-between h-full">
+                <div>
+                    <h3 class="text-xs font-mono uppercase text-dark-500 tracking-widest mb-2">About Me</h3>
+                    <h4 class="text-lg font-bold text-white group-hover:text-accent-lime transition-colors">10.5+ Years of Backend Engineering</h4>
+                    <p class="text-sm text-dark-400 mt-1">Senior PHP/Laravel developer. View my full experience on LinkedIn.</p>
+                </div>
+                <div
+                    class="w-10 h-10 rounded-full border border-dark-600 flex items-center justify-center group-hover:border-accent-lime group-hover:text-accent-lime transition-all">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- Mouse Tracking Script for Glow Effect -->
+    <script>
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+
+</html>
