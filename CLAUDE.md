@@ -44,7 +44,7 @@ The blog section uses an HTTP fetch on page load. Skeleton shimmer placeholders 
 
 ## Editing Notes
 
-- The resume PDF served at the bottom is `Nishil_Bhave_Senior_Backend_Dev.pdf`. If renamed, update the `<a href>` accordingly.
+- The resume PDF served at the bottom is `resume/Nishil_Bhave_Senior_Backend_Dev.pdf`. If renamed or moved, update the `<a href>` accordingly.
 - The GitHub avatar URL is hard-coded: `https://avatars.githubusercontent.com/u/13285272?v=4`. Stable as long as the GitHub user ID doesn't change.
 - Service CTAs use `mailto:` with `subject=` and `body=` URL-encoded — keep encoding consistent if editing.
 - All three productized offer prices are intentionally hidden from the page (the user's choice). Don't add public pricing without confirming.
