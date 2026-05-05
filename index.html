@@ -232,7 +232,7 @@
 
     <div class="bg-noise"></div>
 
-    <main class="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 auto-rows-min md:auto-rows-[180px] gap-4">
+    <main class="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 auto-rows-min md:auto-rows-[180px] md:[grid-template-rows:180px_180px_180px_auto_180px_180px_180px_180px_180px_180px_auto_auto] gap-4">
 
         <!-- ============================================ -->
         <!-- HERO ROW                                      -->
@@ -294,7 +294,7 @@
             <div class="card-content flex flex-col justify-between h-full p-8 z-20">
                 <div class="flex items-start justify-between">
                     <span class="eyebrow text-violet-300/80">Featured Build · 2026</span>
-                    <span class="px-2.5 py-1 rounded-full bg-white/10 border border-white/10 text-white text-[10px] font-mono uppercase tracking-wider">
+                    <span class="px-2.5 py-1 rounded-full bg-white/10 border border-white/10 text-white text-[10px] font-mono uppercase tracking-wider whitespace-nowrap shrink-0">
                         Live · Paid
                     </span>
                 </div>
@@ -358,7 +358,7 @@
         <!-- WORK WITH ME — SERVICES                       -->
         <!-- ============================================ -->
 
-        <div class="md:col-span-3 lg:col-span-4 !min-h-0 !row-auto py-2 px-2">
+        <div class="md:col-span-3 lg:col-span-4 !min-h-0 !row-auto px-2 pt-2 pb-2 md:pt-8">
             <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 md:gap-4">
                 <div>
                     <span class="eyebrow">§ Work with me</span>
@@ -609,7 +609,7 @@
         <!-- LATEST WRITING — DYNAMIC                      -->
         <!-- ============================================ -->
 
-        <div class="md:col-span-3 lg:col-span-4 !min-h-0 !row-auto py-2 px-2">
+        <div class="md:col-span-3 lg:col-span-4 !min-h-0 !row-auto px-2 pt-2 pb-2 md:pt-8">
             <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 md:gap-4">
                 <div>
                     <span class="eyebrow">§ Latest writing</span>
@@ -624,7 +624,7 @@
 
         <div id="blog-posts" class="md:col-span-3 lg:col-span-4 grid grid-cols-1 md:grid-cols-3 gap-4 !row-auto !min-h-0">
             <!-- Skeleton placeholders -->
-            <div class="bento-card !min-h-[200px]">
+            <div class="bento-card !min-h-[240px]">
                 <div class="skeleton h-3 w-20 rounded mb-4"></div>
                 <div class="skeleton h-5 w-full rounded mb-2"></div>
                 <div class="skeleton h-5 w-3/4 rounded mb-4"></div>
@@ -632,7 +632,7 @@
                 <div class="skeleton h-3 w-full rounded mb-1.5"></div>
                 <div class="skeleton h-3 w-2/3 rounded"></div>
             </div>
-            <div class="bento-card !min-h-[200px]">
+            <div class="bento-card !min-h-[240px]">
                 <div class="skeleton h-3 w-20 rounded mb-4"></div>
                 <div class="skeleton h-5 w-full rounded mb-2"></div>
                 <div class="skeleton h-5 w-3/4 rounded mb-4"></div>
@@ -640,7 +640,7 @@
                 <div class="skeleton h-3 w-full rounded mb-1.5"></div>
                 <div class="skeleton h-3 w-2/3 rounded"></div>
             </div>
-            <div class="bento-card !min-h-[200px]">
+            <div class="bento-card !min-h-[240px]">
                 <div class="skeleton h-3 w-20 rounded mb-4"></div>
                 <div class="skeleton h-5 w-full rounded mb-2"></div>
                 <div class="skeleton h-5 w-3/4 rounded mb-4"></div>
@@ -827,20 +827,20 @@
 
                 container.innerHTML = posts.map(p => {
                     const title = stripHtml(p.title?.rendered || '').trim();
-                    const excerpt = stripHtml(p.excerpt?.rendered || '').trim().slice(0, 160);
+                    const excerpt = stripHtml(p.excerpt?.rendered || '').trim().slice(0, 130);
                     const date = formatDate(p.date);
                     const link = p.link;
                     return `
-                        <a href="${link}" target="_blank" rel="noopener" class="bento-card group !min-h-[200px]">
-                            <div class="card-content flex flex-col justify-between h-full">
+                        <a href="${link}" target="_blank" rel="noopener" class="bento-card group !min-h-[240px]">
+                            <div class="card-content flex flex-col justify-between h-full gap-3">
                                 <div>
                                     <div class="text-xs font-mono text-dark-500 mb-3">${date}</div>
-                                    <h3 class="font-bold text-white text-base leading-snug mb-3 group-hover:text-accent-lime transition-colors line-clamp-3">
+                                    <h3 class="font-bold text-white text-base leading-snug mb-2 group-hover:text-accent-lime transition-colors line-clamp-2">
                                         ${title}
                                     </h3>
-                                    <p class="text-sm text-dark-400 leading-relaxed line-clamp-3">${excerpt}${excerpt.length === 160 ? '…' : ''}</p>
+                                    <p class="text-sm text-dark-400 leading-relaxed line-clamp-2">${excerpt}${excerpt.length === 130 ? '…' : ''}</p>
                                 </div>
-                                <div class="flex items-center gap-2 text-xs font-mono text-dark-500 mt-4 pt-3 border-t border-dark-800">
+                                <div class="flex items-center gap-2 text-xs font-mono text-dark-500 pt-3 border-t border-dark-800">
                                     <span class="group-hover:text-accent-lime transition-colors">Read post</span>
                                     <span class="group-hover:translate-x-1 transition-transform">→</span>
                                 </div>
