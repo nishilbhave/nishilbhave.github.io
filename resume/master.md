@@ -57,10 +57,10 @@ Pick one per resume based on the target role's primary axis. **Limit ~110 chars*
 |---|---|---|
 | H1 | Senior Software Engineer · 11y backend · Building AI / multi-agent systems (Sivon HQ — 29 agents in prod) | **Default — honest hybrid** |
 | H2 | Senior Backend Engineer · Laravel / Next.js · Scaled ERP to 5k subs · AWS · Going AI-native | Backend-leaning roles (PHP/Laravel ecosystem) |
-| H3 | Senior Software Engineer · Backend + AI agents · 11y · Led teams · Scaled subscription SaaS to 5k users | Senior IC at AI-product companies |
-| H4 | Founding Engineer · 11y building production SaaS · Backend, AI agents, full-stack · Mumbai (remote) | Founding Engineer roles at AI startups |
+| H3 | Senior Software Engineer · Backend + AI agents · 11y · Led teams · Scaled subscription platform to 5k users | Senior IC at AI-product companies |
+| H4 | Founding Engineer · 11y shipping production systems · Backend, AI agents, full-stack · Mumbai (remote) | Founding Engineer roles at AI startups |
 | H5 | Applied AI Engineer · Designed & shipped 29 production agents (Sivon HQ) · 11y backend foundation | Applied AI / AI Engineer roles |
-| H6 | Staff Software Engineer · Scaled SaaS to 5k subs, led 4-eng teams, building multi-agent AI systems | Staff IC roles emphasizing leadership |
+| H6 | Staff Software Engineer · Scaled subscription platform to 5k subs, led 4-eng teams, building multi-agent AI systems | Staff IC roles emphasizing leadership |
 | H7 | Forward-Deployed Engineer · 11y translating ambiguous problems into shipped systems · AI-native | FDE roles (Anthropic, OpenAI, Scale, Glean, Palantir) |
 
 ---
@@ -76,10 +76,10 @@ Each variant ~3 sentences. Tailored resumes use one. Always lead with proof; nev
 > Senior PHP/Laravel engineer with 11 years building and scaling backend systems. Led the backend at Fooddarzee, scaling a subscription ERP to 5,000 active subscribers and 4,000+ daily orders; led a team of 4 engineers; cut AWS hosting costs ~40% via a serverless migration. Now extending into AI/agent system design — built Sivon HQ with 29 agents in production.
 
 ### S3 — Founding Engineer leaning
-> Senior engineer with 11 years shipping production SaaS, including 6 years owning the backend of a subscription platform serving 5,000+ active users. Comfortable owning every layer — architecture, full-stack build, billing, infra, deploy. Currently building Sivon HQ solo: a multi-agent AI platform with 29 agents in production.
+> Senior engineer with 11 years shipping production systems, including 6 years owning the backend of a subscription platform serving 5,000+ active users. Comfortable owning every layer — architecture, full-stack build, billing, infra, deploy. Currently building Sivon HQ solo: a multi-agent AI platform with 29 agents in production.
 
 ### S4 — Applied AI / Multi-agent leaning
-> Engineer building production multi-agent systems. Designed and shipped 29 agents across 7 engines for Sivon HQ — covering topology design, handoff protocols, eval harnesses, cost attribution, and PII redaction. Backed by 11 years of production engineering, including 6 years scaling a subscription SaaS to 5,000+ users.
+> Engineer building production multi-agent systems. Designed and shipped 29 agents across 7 engines for Sivon HQ — covering topology design, handoff protocols, eval harnesses, cost attribution, and PII redaction. Backed by 11 years of production engineering, including 6 years scaling a subscription platform to 5,000+ users.
 
 ### S5 — Forward-Deployed leaning
 > Senior engineer with 11 years translating ambiguous problems into shipped systems for non-technical stakeholders. At Fooddarzee, designed an ERP with role-specific workflows for Super Admins, Nutritionists, Chefs, and Customers, serving 5,000+ active subscribers and 4,000+ daily orders. Now building AI products that meet real businesses where they are.

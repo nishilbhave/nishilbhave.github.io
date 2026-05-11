@@ -36,7 +36,7 @@ GitHub Pages serves `main` directly — `git push origin main` deploys. No build
 Everything lives in `index.html`. The page is a single bento grid with sections separated by full-width header cards:
 
 1. **Hero** — Profile (2×2) + Sivon HQ feature card (2×2)
-2. **Stats strip** — 4 metric cards (11 yrs / 3 SaaS / 10k subs / 29 agents)
+2. **Stats strip** — 4 metric cards (11 yrs / 3 products / 10k subs / 29 agents)
 3. **§ Work with me** — Services A (SaaS MVP), B (Multi-agent), D (Fractional retainer wide)
 4. **Proof** — StatusLink + MakeToCreate (2×1 each), Experience (2×2) + GitHub repos showcase (2×2)
 5. **§ Latest writing** — 3 dynamic posts via WP REST API with skeleton loading + fallback
@@ -78,7 +78,7 @@ The blog section uses an HTTP fetch on page load. Skeleton shimmer placeholders 
 ### Brand Personality
 **Confident · Technical · Calm.**
 
-- *Confident, not arrogant* — Every claim is backed by a metric or link (10k subs, 29 agents, 3 SaaS shipped, GitHub repos). No hype.
+- *Confident, not arrogant* — Every claim is backed by a metric or link (10k subs, 29 agents, 3 products shipped, GitHub repos). No hype.
 - *Technical, not jargon-laden* — Precise vocabulary for a peer audience ("agent topology," "PII redaction") without gatekeeping.
 - *Calm, not flat* — Restrained motion, generous whitespace, no urgency banners. Composure over noise.
 - *Voice* — Opinionated where it earns it ("not a demo, a system that ships"), terse, no fluff. The MakeToCreate tagline *"for developers who ship"* is the soul.

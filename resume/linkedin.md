@@ -40,7 +40,7 @@ Pick ONE. I recommend **H1** as the default — it's the strongest ATS-matchable
 
 ### H1 — Recommended (default hybrid, 137 chars)
 ```
-Senior Software Engineer · AI / Agent Systems · Built Sivon HQ (29 agents in prod) · Scaled SaaS to 5K users · 11y · Mumbai
+Senior Software Engineer · AI / Agent Systems · Built Sivon HQ (29 agents in prod) · Scaled subscription platform to 5K subs · 11y · Mumbai
 ```
 
 ### H2 — Backend-leaning alternative (133 chars)
@@ -50,42 +50,38 @@ Senior Backend Engineer · Laravel / Next.js · Scaled ERP to 5K subs · Buildin
 
 ### H3 — Founding-Engineer-target alternative (124 chars)
 ```
-Founding Engineer · 11y building production SaaS · Backend + AI / multi-agent systems · Sivon HQ creator · Booking Q3 2026
+Founding Engineer · 11y shipping production systems · Backend + AI / multi-agent systems · Sivon HQ creator · Booking Q3 2026
 ```
 
 ---
 
-## 3. About Section (2,600 char limit · this draft ~1,650)
+## 3. About Section (2,600 char limit · this draft ~1,950)
 
-Copy-paste this verbatim. The line breaks matter — LinkedIn preserves them and they make this scannable on mobile.
+> Recruiter-inbound priority. Leads with FT availability; client work is demoted to a single line near the bottom. Copy-paste verbatim — the line breaks matter, LinkedIn preserves them and they make this scannable on mobile.
 
 ```
-I'm a senior backend engineer who went AI-native. 11 years shipping production systems end-to-end.
+I'm a senior software engineer who went AI-native. 11 years shipping production systems end-to-end.
 
-Currently building:
+Open to senior full-time roles — Senior / Staff IC, Founding Engineer, Applied AI Engineer, Member of Technical Staff. Remote (worldwide), Mumbai or Bangalore (in-person).
 
-→ Sivon HQ — a multi-agent AI marketing platform with 29 specialized agents across 7 engines (research, strategy, copy, design, distribution, analytics, ops). Live in production, building toward first paying customers. Multi-workspace, eval harness, observability, PII redaction at the agent boundary.
+Recently shipped:
 
-Previous experience:
+→ Sivon HQ — a multi-agent AI marketing platform with 29 specialized agents across 7 engines (research, strategy, copy, design, distribution, analytics, ops). Built solo. Live in production. Multi-workspace, eval harness, observability, PII redaction at the agent boundary. SOC 2 + GDPR-aligned architecture.
 
-At Fooddarzee (Jul 2019 – Jul 2025), I led the backend of a meal-subscription platform that scaled to 5,000 active subscribers and 4,000+ daily orders. Led a team of 4 engineers. Cut AWS hosting costs ~40% via a serverless migration. Designed and tuned a subscription engine handling date-level customization for thousands of daily deliveries.
+→ Fooddarzee (Jul 2019 – Jul 2025) — backend lead for a meal-subscription platform that scaled to 5,000 active subscribers and 4,000+ daily orders. Led a team of 4 engineers. Cut AWS hosting costs ~40% via a serverless migration. Designed the subscription engine handling date-level customization for thousands of daily deliveries.
 
-Before that — co-founder & technical lead at Frocery (grocery e-commerce), engineer at Gray Matrix, and PHP trainer at Suven (15–20 interns).
+Before that: co-founder & technical lead at Frocery (grocery e-commerce), engineer at Gray Matrix, PHP trainer at Suven (15–20 interns).
 
-What I'm good at:
-• Designing multi-agent AI systems that survive production — topology, evals, observability, cost attribution, PII redaction
-• Greenfield SaaS, end-to-end — Next.js + Supabase or Laravel + MySQL; Stripe billing; CI; deployed on Vercel / Cloud Run
-• Embedded senior engineer for early-stage teams — architecture, code review, mentoring, on-call decisions
+What I'm strongest at:
+• Multi-agent AI systems that survive production — topology, evals, observability, cost attribution, PII redaction
+• Greenfield SaaS, end-to-end — Next.js + Supabase or Laravel + MySQL; Stripe billing; CI; deploy
+• Senior IC at early-stage teams — architecture, code review, mentoring, on-call decisions
 
-Three ways to hire me (currently booking Q3 2026):
+If you're hiring for a role where shipping AI in production matters more than the title, let's talk.
 
-1. SaaS MVP build (4–12 weeks) — idea to shipped product. You own the code from day one.
-2. Multi-agent AI system (3–8 weeks) — not a demo, a system that ships.
-3. Fractional senior engineer (monthly retainer) — embed in your team.
+Also available for select client work (SaaS MVP build · multi-agent system build · fractional retainer) — booking Q3 2026. Details at nishilbhave.github.io.
 
-Open to senior FT roles too — Senior / Staff IC, Founding Engineer at AI startups, Applied AI Engineer roles.
-
-Email a one-line pitch to nishilbhave@gmail.com — reply within 24h.
+Reach me: nishilbhave@gmail.com — 24h reply.
 
 Portfolio: nishilbhave.github.io
 Sivon HQ: sivonhq.com
@@ -105,7 +101,7 @@ LinkedIn caps each role description at 2,000 characters. Plain bullets render be
 **Description (paste verbatim):**
 
 ```
-Building production AI and SaaS products solo.
+Building production AI products solo.
 
 Sivon HQ — sivonhq.com
 A multi-agent AI marketing platform with 29 specialized agents across 7 engines (research, strategy, copy, design, distribution, analytics, ops). Live in production.
@@ -187,7 +183,7 @@ Featured appears above Experience and gets 3–4× the click-through. Order matt
 
 1. **Link → Portfolio** (`https://nishilbhave.github.io/`)
    - Title: *Hire me — three productized offers*
-   - Description: *AI-native senior builder. 11 years shipping production SaaS.*
+   - Description: *AI-native senior builder. 11 years shipping production systems.*
 
 2. **Link → Sivon HQ** (`https://sivonhq.com`)
    - Title: *Sivon HQ — 29 AI agents across 7 engines*
