@@ -2,7 +2,7 @@
 
 > Derives from `master.md`. Calibrated honesty applied throughout.
 > Profile URL: https://linkedin.com/in/nishil-bhave
-> Last updated: 2026-05-11
+> Last updated: 2026-05-12
 
 **Update order (35–45 min total):**
 1. Banner image (5 min)
@@ -94,30 +94,24 @@ GitHub: github.com/nishilbhave
 
 LinkedIn caps each role description at 2,000 characters. Plain bullets render best. Use `•` not `-` (LinkedIn renders bullets cleaner).
 
-### 4.1 Founder & Solo Developer
-**Company:** *Self-employed*
-**Dates:** January 2026 – Present
-**Location:** Remote
+> **Strategy note (2026-05-12):** Going with separate-company entries per product on LinkedIn (option A) instead of one consolidated "Self-employed" block. StatusLink already lives on the profile as its own entry (Dec 2025 – Present). MakeToCreate is a publication, not an employer — it stays in About + Featured, not Experience. Open-source projects stay in About + Featured too.
+
+### 4.1 Founder · Sivon HQ
+**Company:** *Sivon HQ* — needs a LinkedIn Company Page so the entry renders with a logo (create at `linkedin.com/company/setup` if it doesn't exist yet; without one the entry will stay plain text).
+**Dates:** March 2026 – Present
+**Location:** Mumbai, Maharashtra, India
 **Description (paste verbatim):**
 
 ```
-Building production AI products solo.
-
-Sivon HQ — sivonhq.com
-A multi-agent AI marketing platform with 29 specialized agents across 7 engines (research, strategy, copy, design, distribution, analytics, ops). Live in production.
+Multi-agent AI marketing platform — 29 specialized agents across 7 engines (research, strategy, copy, design, distribution, analytics, ops). Built solo. Live in production.
 
 • Designed agent topology with explicit handoff protocols, eval harness with regression suite, and per-agent cost attribution
 • Built observability layer covering tracing, token cost attribution per workspace, and PII redaction at the agent boundary
 • Engineered multi-workspace isolation so agencies can run multiple client brands without cross-contamination
 • SOC 2 + GDPR-aligned architecture
-• Stack: Next.js, TypeScript, Python, Claude, Supabase, Firestore, Cloud Run, Vercel
+• Stack: Next.js 15, TypeScript, Python, Claude, Supabase, Firestore, Cloud Run, Vercel
 
-MakeToCreate — maketocreate.com
-Engineering publication on system design, AI tools, and SaaS. For developers who ship.
-
-Operating production infrastructure solo: incident response, billing reconciliation, customer support, deployment automation.
-
-Also maintaining open-source tools: codeprobe (code analysis), claude-skills (Claude skill collection), growth-engine (marketing automation primitives), ats-resume-tailor (JD-targeted resume generation).
+sivonhq.com
 ```
 
 ### 4.2 Senior Backend Developer · Fooddarzee

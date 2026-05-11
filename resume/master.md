@@ -26,8 +26,11 @@ After honesty calibration. **Lead with the strongest verifiable claims; never ov
 - **StatusLink** — built solo as a side/hobby project; functional but not actively maintained, no customer base. *Use as a "I can ship a Next.js + Supabase + Trello/Jira-integrated SaaS solo" proof, not as a product claim.*
 - **MakeToCreate** — new engineering blog; demonstrates writing voice and consistency, but no significant audience yet. *Use as a "I write technical content" proof, not as a reach metric.*
 
+### Locked
+- Sivon HQ launch date: **March 2026** (in production from launch)
+
 ### Still open
-- [ ] Sivon HQ launch date + target date for first paying customer (useful for "shipped from zero to production in X weeks" framing)
+- [ ] Sivon HQ target date for first paying customer (useful for "shipped from zero to production in X weeks" framing)
 - [ ] Frocery traction metric — any orders/day, customer count, or GMV figure safe to share?
 - [ ] AWS Lambda migration absolute $ savings (if "40%" is on a known base)
 - [ ] Education extras (GPA, specialization, honors) — only if competitive
