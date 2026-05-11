@@ -17,6 +17,20 @@ python3 -m http.server 8765
 # then open http://localhost:8765/index.html
 ```
 
+## Deploying
+
+GitHub Pages serves `main` directly — `git push origin main` deploys. No build step, no Actions workflow. There is no staging environment; verify locally before pushing.
+
+## Repo Layout
+
+- `index.html` — the entire site (HTML + inline Tailwind config + inline CSS + inline JS)
+- `resume/Nishil_Bhave_Senior_Backend_Dev.pdf` — the PDF linked from the bottom CTA
+- `resume/master.md` — canonical resume source the `resume-tailor` skill reads from
+- `resume/tailored/` — job-specific tailored resumes (markdown + rendered HTML), one pair per role
+- `resume/exports/` — additional rendered PDFs and the LinkedIn banner PNG
+- `resume/linkedin.md`, `resume/linkedin-banner.html` — LinkedIn profile copy and a standalone banner page (not linked from `index.html`)
+- `README.md` — public-facing summary; mirrors a subset of this file
+
 ## Architecture
 
 Everything lives in `index.html`. The page is a single bento grid with sections separated by full-width header cards:
@@ -30,6 +44,8 @@ Everything lives in `index.html`. The page is a single bento grid with sections 
 7. **Bottom CTA strip** — Resume PDF download, GitHub link, Email Me lime CTA
 
 The blog section uses an HTTP fetch on page load. Skeleton shimmer placeholders show during fetch; on success, 3 cards render and get the mouse-glow listener attached. On failure, a single fallback card links to maketocreate.com.
+
+**Mouse-glow invariant:** `attachGlow()` is bound to every `.bento-card` at DOMContentLoaded, but any card injected after that (the blog cards in both success and failure branches) must call `attachGlow()` again on the new nodes. If you add another dynamic-card path, replicate this — otherwise those cards will look dead.
 
 ## Key Design Decisions
 
