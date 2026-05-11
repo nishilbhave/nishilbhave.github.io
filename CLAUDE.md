@@ -95,7 +95,7 @@ The blog section uses an HTTP fetch on page load. Skeleton shimmer placeholders 
 
 ### Design Principles
 
-1. **Proof over promise.** Every claim links to a verifiable artifact (live URL, repo, metric). If it can't be linked, it doesn't get said. "Architected platforms" is not allowed; "Scaled an ERP to 10,000 active subs at Fooddarzee" is.
+1. **Proof over promise.** Every claim links to a verifiable artifact (live URL, repo, metric). If it can't be linked, it doesn't get said. "Architected platforms" is not allowed; "Scaled an ERP to 5,000 active subs at Fooddarzee" is.
 2. **Accent as currency.** Lime and purple are spent, not sprayed. Each card has at most one accent emphasis — the thing that earns the click. If everything is highlighted, nothing is.
 3. **Calm motion, never hype motion.** Transitions are restrained, no auto-playing video, no scroll-jacking, no countdown timers. The visitor dictates the pace; the page never demands attention.
 4. **Bento as architecture.** Each card is one self-contained unit with one job and one CTA. Section header cards introduce a new chapter; they don't decorate. No card carries two competing actions.

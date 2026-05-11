@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nishil Bhave — Senior Software Engineer</title>
+<style>
+  @page {
+    size: letter;
+    margin: 0.5in 0.55in;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #18181b;
+    font-size: 10.5pt;
+    line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    max-width: 7.6in;
+    margin: 0 auto;
+    padding: 0.35in 0 0.25in;
+  }
+
+  /* ---------- HEADER ---------- */
+  header {
+    margin-bottom: 0.18in;
+  }
+  h1 {
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 2pt;
+    color: #09090b;
+    line-height: 1.05;
+  }
+  .tagline {
+    font-size: 10.5pt;
+    color: #3f3f46;
+    font-weight: 500;
+    margin: 0 0 5pt;
+  }
+  .contact {
+    font-size: 9.5pt;
+    color: #52525b;
+    line-height: 1.5;
+  }
+  .contact a {
+    color: #52525b;
+    text-decoration: none;
+  }
+  .contact .sep {
+    color: #a1a1aa;
+    margin: 0 5pt;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section { margin-top: 11pt; }
+  h2 {
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #09090b;
+    margin: 0 0 4pt;
+    padding-bottom: 3pt;
+    border-bottom: 0.7pt solid #d4d4d8;
+  }
+
+  /* ---------- SUMMARY ---------- */
+  .summary {
+    margin: 0;
+    color: #27272a;
+  }
+  .summary strong { color: #09090b; font-weight: 600; }
+
+  /* ---------- EXPERIENCE ---------- */
+  .role { margin-top: 7pt; page-break-inside: avoid; }
+  .role:first-of-type { margin-top: 4pt; }
+  .role-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12pt;
+    margin-bottom: 1pt;
+  }
+  .role-title {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: #09090b;
+    margin: 0;
+  }
+  .role-meta {
+    font-size: 9pt;
+    color: #71717a;
+    font-style: italic;
+    margin: 0 0 3pt;
+  }
+  .role ul {
+    margin: 2pt 0 0;
+    padding-left: 14pt;
+  }
+  .role li {
+    margin-bottom: 1.5pt;
+    color: #27272a;
+  }
+  .role li strong { color: #09090b; font-weight: 600; }
+
+  /* ---------- PROJECTS ---------- */
+  .projects p { margin: 4pt 0 0; color: #27272a; }
+  .projects p strong { color: #09090b; font-weight: 600; }
+  .projects p em { color: #52525b; font-style: italic; font-size: 9.5pt; }
+
+  /* ---------- SKILLS ---------- */
+  .skills p { margin: 2pt 0; color: #27272a; }
+  .skills strong { color: #09090b; font-weight: 600; }
+
+  /* ---------- EDUCATION ---------- */
+  .edu p { margin: 0; color: #27272a; }
+  .edu strong { color: #09090b; font-weight: 600; }
+
+  /* ---------- LINKS ---------- */
+  a { color: #18181b; text-decoration: none; }
+  .links a { border-bottom: 0.4pt solid #a1a1aa; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Nishil Pravin Bhave</h1>
+  <p class="tagline">Senior Software Engineer · 11y backend · Building AI / multi-agent systems</p>
+  <p class="contact">
+    Mumbai, India<span class="sep">·</span>nishilbhave@gmail.com<span class="sep">·</span>+91 9821251354<br>
+    <span class="links">
+      <a href="https://linkedin.com/in/nishil-bhave">linkedin.com/in/nishil-bhave</a><span class="sep">·</span>
+      <a href="https://github.com/nishilbhave">github.com/nishilbhave</a><span class="sep">·</span>
+      <a href="https://nishilbhave.github.io">nishilbhave.github.io</a>
+    </span>
+  </p>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p class="summary">
+    Senior software engineer with 11 years building production systems end-to-end. As backend lead at Fooddarzee, scaled a meal-subscription ERP to <strong>5,000 active subscribers</strong> and <strong>4,000+ daily orders</strong> while leading a team of 4 engineers. Currently building <strong>Sivon HQ</strong> — a multi-agent AI marketing system with 29 specialized agents across 7 engines, running in production.
+  </p>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="role">
+    <div class="role-head">
+      <p class="role-title">Founder &amp; Solo Developer — Sivon HQ · MakeToCreate · StatusLink</p>
+      <p class="role-meta" style="margin:0;">Remote · Jan 2026 – Present</p>
+    </div>
+    <ul>
+      <li>Designed and built a multi-agent AI system with <strong>29 specialized agents across 7 engines</strong> (research, strategy, copy, design, distribution, analytics, ops); live in production.</li>
+      <li>Implemented explicit agent handoff protocols, an eval harness with regression suite, and per-agent cost attribution — built for production, not demo.</li>
+      <li>Built observability layer covering tracing, token cost attribution per workspace, and PII redaction at the agent boundary; SOC 2 + GDPR-aligned architecture.</li>
+      <li>Engineered multi-workspace isolation so agencies can run multiple client brands without cross-contamination.</li>
+      <li>Stack: <strong>Next.js</strong>, <strong>TypeScript</strong>, <strong>Python</strong>, <strong>Claude</strong>, <strong>Supabase</strong>, <strong>Firestore</strong>, <strong>Cloud Run</strong>, <strong>Vercel</strong>.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-head">
+      <p class="role-title">Senior Backend Developer — Fooddarzee</p>
+      <p class="role-meta" style="margin:0;">Remote · Jul 2019 – Jul 2025</p>
+    </div>
+    <p class="role-meta">Meal-subscription platform · 5,000 active subs · 4,000+ daily orders · Led team of 4 (2 BE + 2 FE)</p>
+    <ul>
+      <li>Architected and owned the backend of a meal-subscription platform that scaled to <strong>5,000 active subscribers</strong> processing <strong>4,000+ meal orders daily</strong>, with no rewrite.</li>
+      <li>Designed the <strong>subscription engine</strong> with date-level customization (veg days, skips, address changes) and preference-driven order calculations for 4,000+ daily deliveries.</li>
+      <li>Architected a <strong>multi-role ERP system</strong> (Super Admin, Admin, Nutritionist, Chef, Customer) — each role with bespoke workflows over a shared data layer.</li>
+      <li>Led migration of the public website to <strong>AWS serverless</strong> (Lambda + CloudFront + S3), <strong>cutting hosting costs ~40%</strong>.</li>
+      <li>Led a team of 4 engineers; conducted code reviews, enforced standards, mentored juniors.</li>
+      <li>Automated manual order-processing workflows, <strong>saving the operations team 10+ hours/week</strong>.</li>
+      <li>Integrated <strong>Razorpay</strong> and <strong>Juspay</strong> for recurring payments (thousands of transactions monthly); <strong>Zoho</strong> for invoicing via OAuth2; CI/CD via GitHub Actions.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-head">
+      <p class="role-title">Co-Founder &amp; Technical Lead — Frocery Innovative Retail Pvt. Ltd.</p>
+      <p class="role-meta" style="margin:0;">Mumbai · Jan 2018 – May 2019</p>
+    </div>
+    <ul>
+      <li>Co-founded and tech-led an end-to-end grocery e-commerce platform — backend, mobile, payments, delivery ops.</li>
+      <li>Built REST APIs and CMS in PHP (CodeIgniter); developed cross-platform mobile apps in Ionic + Angular.</li>
+      <li>Integrated Razorpay payments and Firebase push notifications.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-head">
+      <p class="role-title">Assistant System Analyst — Gray Matrix Solutions</p>
+      <p class="role-meta" style="margin:0;">Mumbai · Feb 2016 – Oct 2017</p>
+    </div>
+    <ul>
+      <li>Built hybrid mobile apps (Ionic + AngularJS) and backend APIs supporting multiple concurrent client projects.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="role-head">
+      <p class="role-title">Technical Trainer &amp; Developer — Suven Consultants &amp; Technology</p>
+      <p class="role-meta" style="margin:0;">Mumbai · Dec 2014 – Oct 2015</p>
+    </div>
+    <ul>
+      <li>Developed PHP web applications; <strong>trained 15–20 interns</strong> in PHP, MySQL, HTML/CSS, and MVC architecture.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="projects">
+  <h2>Selected Projects</h2>
+  <p><strong><a href="https://sivonhq.com" class="links">Sivon HQ</a></strong> — Multi-agent AI marketing platform. 29 agents across 7 engines. Multi-workspace · eval harness · observability · PII redaction. <em>Next.js · TypeScript · Python · Claude · Supabase · Cloud Run.</em></p>
+  <p><strong><a href="https://getstatuslink.com" class="links">StatusLink</a></strong> — Side project. SaaS that generates branded client status pages from Trello/Jira boards. Magic-link client access · Row-Level Security multi-tenancy. <em>Next.js · Supabase · Vercel.</em></p>
+  <p><strong><a href="https://github.com/nishilbhave/codeprobe" class="links">codeprobe</a></strong> — Open-source code analysis tool covering security, performance, error handling, SOLID, and design pattern audits. <em>Python.</em></p>
+</section>
+
+<section class="skills">
+  <h2>Skills</h2>
+  <p><strong>Languages:</strong> TypeScript/JavaScript (ES6+, Node.js), PHP (OOP, MVC), Python, SQL (MySQL, PostgreSQL)</p>
+  <p><strong>Frameworks:</strong> Next.js (App Router, SSR, RSC), Laravel, React, Vue.js, Blade, CodeIgniter</p>
+  <p><strong>AI / LLM:</strong> Claude (tool use, prompt caching, agent design), multi-agent system design, eval harnesses, LLM observability (tracing, cost attribution, PII redaction), prompt engineering, RAG</p>
+  <p><strong>Infrastructure:</strong> AWS (Lambda, EC2, S3, CloudFront), Google Cloud (Cloud Run, Firestore), Vercel, Supabase (Auth, RLS), Linux server admin</p>
+  <p><strong>APIs &amp; Integrations:</strong> REST · GraphQL · OAuth2 · Razorpay · Juspay · Stripe · Trello · Jira · Firebase Cloud Messaging</p>
+  <p><strong>DevOps &amp; Tooling:</strong> Git/GitHub, GitHub Actions (CI/CD), Composer, npm, Webpack, Vite, PHPUnit</p>
+</section>
+
+<section class="edu">
+  <h2>Education</h2>
+  <p><strong>Bachelor of Engineering (Computers)</strong> — Mumbai University · 2015</p>
+</section>
+
+</body>
+</html>
