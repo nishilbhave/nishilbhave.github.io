@@ -82,7 +82,7 @@ Each variant ~3 sentences. Tailored resumes use one. Always lead with proof; nev
 > Senior engineer with 11 years shipping production systems, including 6 years owning the backend of a subscription platform serving 5,000+ active users. Comfortable owning every layer — architecture, full-stack build, billing, infra, deploy. Currently building Sivon HQ solo: a multi-agent AI platform with 29 agents in production.
 
 ### S4 — Applied AI / Multi-agent leaning
-> Engineer building production multi-agent systems. Designed and shipped 29 agents across 7 engines for Sivon HQ — covering topology design, handoff protocols, eval harnesses, cost attribution, and PII redaction. Backed by 11 years of production engineering, including 6 years scaling a subscription platform to 5,000+ users.
+> Engineer building production multi-agent systems. Designed and shipped 29 agents across 7 engines for Sivon HQ — two-phase agent architecture, explicit director-briefing handoff protocol with live SSE streaming, multi-workspace isolation, and a pluggable multi-destination publisher running on GCP. Backed by 11 years of production engineering, including 6 years scaling a subscription platform to 5,000+ users.
 
 ### S5 — Forward-Deployed leaning
 > Senior engineer with 11 years translating ambiguous problems into shipped systems for non-technical stakeholders. At Fooddarzee, designed an ERP with role-specific workflows for Super Admins, Nutritionists, Chefs, and Customers, serving 5,000+ active subscribers and 4,000+ daily orders. Now building AI products that meet real businesses where they are.
@@ -102,14 +102,17 @@ Each variant ~3 sentences. Tailored resumes use one. Always lead with proof; nev
 #### Lead lines (pick one)
 - *Building Sivon HQ — a multi-agent AI marketing platform with 29 specialized agents across 7 engines, now live in production.*
 - *Designing and shipping production AI systems solo — Sivon HQ's 29-agent topology covers research, strategy, copy, design, distribution, analytics, and ops.*
-- *Founded Sivon HQ and built it from architecture to deployment solo: 29 agents across 7 engines, multi-workspace isolation, eval harness, full observability.*
+- *Founded Sivon HQ and built it from architecture to deployment solo: 29 agents across 7 engines, two-phase agent architecture, multi-workspace isolation, live SSE streaming of handoffs, and a pluggable multi-destination publisher on GCP.*
 
 #### Bullets — Sivon HQ (primary)
-- Designed and built a multi-agent AI system with **29 specialized agents across 7 engines** (research, strategy, copy, design, distribution, analytics, ops); live in production.
-- Implemented explicit agent handoff protocols, an eval harness with regression suite, and cost attribution per agent run — designed for production, not demo.
-- Built observability layer covering tracing, token cost attribution per workspace, and PII redaction at the agent boundary; SOC 2 + GDPR-aligned architecture from day one.
-- Engineered multi-workspace isolation so agencies can run multiple client brands without cross-contamination.
-- Stack: Next.js (App Router), TypeScript, Python, Claude (primary LLM), Supabase, Firestore, Cloud Run, Vercel.
+- Designed and built a multi-agent AI system with **29 specialized agents across 7 engines** (research, strategy, copy, design, distribution, analytics, ops); live in production at sivonhq.com.
+- Designed a **two-phase agent architecture**: a Foundation pipeline (Research → Strategy) builds persistent brand context once, then on-demand agents reuse it across every channel — eliminating the "re-prompt ChatGPT every time" problem that kills generic AI tools.
+- Engineered an explicit handoff protocol via lightweight director briefings between agents; **live SSE streaming** surfaces tool calls, briefings, and outputs to the UI in real time.
+- Built **multi-workspace isolation** so agencies can run multiple client brands without cross-contamination — all data strictly scoped to `(user_id, workspace_id)` and enforced at every router and Firestore query.
+- Shipped background intelligence (**Pulse**) — competitor tracking, AI citation monitoring, market moments — plus automated Weekly Briefs synthesizing workspace deltas.
+- Built a pluggable multi-destination publisher layer (Ghost, WordPress, Framer, Webflow, Resend, custom webhooks) driven by a Cloud Scheduler calendar that dispatches scheduled content end-to-end.
+- Production stack on GCP (us-central1): Cloud Run, Cloud Scheduler, Cloud Build, Firestore, GCS, with Lemon Squeezy billing, Resend transactional email, and Firebase Auth (Google/Microsoft/email).
+- Stack: Next.js 16, React 19, TypeScript, Tailwind CSS v4, Python, FastAPI, Google Gemini, Firestore, Firebase Auth, GCS, Cloud Run, Cloud Build, Lemon Squeezy, Resend, Playwright.
 
 #### Bullets — MakeToCreate
 - Write and publish MakeToCreate, an engineering publication covering system design, AI tooling, and SaaS — *for developers who ship*.
@@ -202,8 +205,8 @@ Each variant ~3 sentences. Tailored resumes use one. Always lead with proof; nev
 
 ### 5.1 Sivon HQ — sivonhq.com *(flagship project)*
 - **One-liner:** AI marketing team built around a 29-agent topology across 7 engines. Live in production.
-- **Stack:** Next.js 15, TypeScript, Python, Claude, Supabase, Firestore, Cloud Run, Vercel.
-- **Highlights:** Multi-workspace isolation · SOC 2 + GDPR-aligned · Eval harness with regression suite · Token cost attribution per workspace · PII redaction at agent boundary.
+- **Stack:** Next.js 16, React 19, TypeScript, Tailwind CSS v4, Python, FastAPI, Google Gemini, Firestore, Firebase Auth, GCS, Cloud Run, Cloud Build, Lemon Squeezy, Resend, Playwright.
+- **Highlights:** Two-phase agent architecture (Foundation pipeline → on-demand reuse) · Explicit director-briefing handoff protocol with live SSE streaming · Multi-workspace isolation strictly scoped to `(user_id, workspace_id)` at every router and Firestore query · Pulse background intelligence (competitor tracking, AI citation monitoring, market moments) + automated Weekly Briefs · Pluggable multi-destination publisher (Ghost, WordPress, Framer, Webflow, Resend, webhooks) on Cloud Scheduler-driven calendar · Full GCP production deployment (us-central1).
 - **Status:** Live in production, building toward first paying customers.
 - **Link:** sivonhq.com
 - **My role:** Solo founder, designer, engineer, operator.
@@ -260,16 +263,17 @@ Profile: `github.com/nishilbhave` · 15 repos.
 - **Ionic** · **AngularJS / Angular** (legacy mobile)
 
 ### AI / LLM / Agents
-- **Claude (primary)** — Sonnet, Opus, Haiku; tool use; prompt caching; agent design
-- **Multi-agent system design** — topology, handoff protocols, eval harnesses
-- **LLM observability** — tracing, cost attribution, PII redaction, evals/regressions
+- **Google Gemini** (primary at Sivon HQ) — multi-agent orchestration, structured outputs, tool use
+- **Claude** (Sonnet, Opus, Haiku) — tool use, prompt caching, agent design
+- **Multi-agent system design** — two-phase architecture (Foundation + on-demand), explicit director-briefing handoff protocols, live SSE streaming
+- **Multi-tenant agent platforms** — strict workspace isolation, per-tenant data scoping, background intelligence pipelines (competitor tracking, AI citation monitoring)
 - **Prompt engineering** — system prompts, few-shot, structured outputs
 - **RAG patterns** (where applicable)
 - **AI-assisted development workflows** (Claude Code, Cursor)
 
 ### Infrastructure & Cloud
 - **AWS** — EC2, Lambda, CloudFront, S3 (serverless migration experience)
-- **Google Cloud** — Cloud Run, Firestore
+- **Google Cloud** — Cloud Run, Cloud Build, Cloud Scheduler, Firestore, GCS, Firebase Auth (production deployment at Sivon HQ in us-central1)
 - **Vercel** — production deploys, edge functions
 - **Supabase** — PostgreSQL, Auth, Row Level Security, Edge Functions
 - **Linux** — server admin, DNS, SSL, domain migrations
@@ -284,7 +288,7 @@ Profile: `github.com/nishilbhave` · 15 repos.
 - **Git / GitHub** — branching strategies, PR workflows, code review, rebasing
 - **CI/CD** — GitHub Actions (build, test, deploy)
 - **Build tooling** — Composer, npm, Webpack, Vite
-- **Testing** — PHPUnit (basic), TypeScript tests, eval harnesses for agents
+- **Testing** — PHPUnit (basic), TypeScript tests, Playwright (end-to-end)
 
 ### Architecture & Practice
 - **Multi-tenant SaaS architecture** · **Subscription/billing systems** · **ERP design**

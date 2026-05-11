@@ -66,14 +66,14 @@ Open to senior full-time roles — Senior / Staff IC, Founding Engineer, Applied
 
 Recently shipped:
 
-→ Sivon HQ — a multi-agent AI marketing platform with 29 specialized agents across 7 engines (research, strategy, copy, design, distribution, analytics, ops). Built solo. Live in production. Multi-workspace, eval harness, observability, PII redaction at the agent boundary. SOC 2 + GDPR-aligned architecture.
+→ Sivon HQ — a multi-agent AI marketing platform with 29 specialized agents across 7 engines (research, strategy, copy, design, distribution, analytics, ops). Built solo. Live in production. Two-phase agent architecture, live SSE streaming of agent handoffs, multi-workspace isolation, pluggable multi-destination publishing — full GCP production deployment.
 
 → Fooddarzee (Jul 2019 – Jul 2025) — backend lead for a meal-subscription platform that scaled to 5,000 active subscribers and 4,000+ daily orders. Led a team of 4 engineers. Cut AWS hosting costs ~40% via a serverless migration. Designed the subscription engine handling date-level customization for thousands of daily deliveries.
 
 Before that: co-founder & technical lead at Frocery (grocery e-commerce), engineer at Gray Matrix, PHP trainer at Suven (15–20 interns).
 
 What I'm strongest at:
-• Multi-agent AI systems that survive production — topology, evals, observability, cost attribution, PII redaction
+• Multi-agent AI systems that survive production — two-phase architecture, explicit handoff protocols, live SSE streaming, multi-tenant isolation, multi-destination publishing
 • Greenfield SaaS, end-to-end — Next.js + Supabase or Laravel + MySQL; Stripe billing; CI; deploy
 • Senior IC at early-stage teams — architecture, code review, mentoring, on-call decisions
 
@@ -103,15 +103,16 @@ LinkedIn caps each role description at 2,000 characters. Plain bullets render be
 **Description (paste verbatim):**
 
 ```
-Multi-agent AI marketing platform — 29 specialized agents across 7 engines (research, strategy, copy, design, distribution, analytics, ops). Built solo. Live in production.
+Multi-agent AI marketing platform — 29 specialized agents across 7 engines (research, strategy, copy, design, distribution, analytics, ops). Built solo. Live in production at sivonhq.com.
 
-• Designed agent topology with explicit handoff protocols, eval harness with regression suite, and per-agent cost attribution
-• Built observability layer covering tracing, token cost attribution per workspace, and PII redaction at the agent boundary
-• Engineered multi-workspace isolation so agencies can run multiple client brands without cross-contamination
-• SOC 2 + GDPR-aligned architecture
-• Stack: Next.js 15, TypeScript, Python, Claude, Supabase, Firestore, Cloud Run, Vercel
+• Designed a two-phase agent architecture: a Foundation pipeline (Research → Strategy) builds persistent brand context once, then on-demand agents reuse it across every channel—eliminating the "re-prompt ChatGPT every time" problem that kills generic AI tools
+• Engineered explicit handoff protocol via lightweight director briefings between agents; live SSE streaming surfaces tool calls, briefings, and outputs to the UI in real time
+• Built multi-workspace isolation so agencies can run multiple client brands without cross-contamination — all data strictly scoped to (user_id, workspace_id), enforced at every router and Firestore query
+• Shipped background intelligence (Pulse) — competitor tracking, AI citation monitoring, market moments — plus automated Weekly Briefs synthesizing workspace deltas
+• Built pluggable multi-destination publisher layer (Ghost, WordPress, Framer, Webflow, Resend, custom webhooks) and a Cloud Scheduler-driven calendar that dispatches scheduled content end-to-end
+• Production stack on GCP (us-central1): Cloud Run, Cloud Scheduler, Cloud Build, Firestore, GCS, with Lemon Squeezy billing, Resend transactional email, and Firebase Auth (Google/Microsoft/email)
 
-sivonhq.com
+Stack: Next.js 16, React 19, TypeScript, Tailwind CSS v4, Python, FastAPI, Google Gemini, Firestore, Firebase Auth, GCS, Cloud Run, Cloud Build, Lemon Squeezy, Resend, Playwright
 ```
 
 ### 4.2 Senior Backend Developer · Fooddarzee
@@ -208,7 +209,7 @@ Three productized offers for founders and engineering leaders:
 
 1. SaaS MVP build (4–12 wks) — Idea to shipped product. Architecture, full-stack build, billing, infra, deploy. You own the codebase from day one. Stack: Next.js + Supabase or Laravel + MySQL.
 
-2. Multi-agent AI system (3–8 wks) — Production agent pipelines. Topology design, eval harness, observability, cost attribution, PII redaction. Not a demo, a system that ships.
+2. Multi-agent AI system (3–8 wks) — Production agent pipelines. Two-phase architecture, explicit handoff protocols, live SSE streaming, multi-tenant isolation, pluggable multi-destination publishing on GCP. Not a demo, a system that ships.
 
 3. Fractional senior engineer (monthly retainer) — Embed in your team. Architecture, code review, mentoring, and on-call decisions for early-stage teams.
 
