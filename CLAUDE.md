@@ -24,12 +24,10 @@ GitHub Pages serves `main` directly — `git push origin main` deploys. No build
 ## Repo Layout
 
 - `index.html` — the entire site (HTML + inline Tailwind config + inline CSS + inline JS)
-- `resume/Nishil_Bhave_Senior_Backend_Dev.pdf` — the PDF linked from the bottom CTA
-- `resume/master.md` — canonical resume source the `resume-tailor` skill reads from
-- `resume/tailored/` — job-specific tailored resumes (markdown + rendered HTML), one pair per role
-- `resume/exports/` — additional rendered PDFs and the LinkedIn banner PNG
-- `resume/linkedin.md`, `resume/linkedin-banner.html` — LinkedIn profile copy and a standalone banner page (not linked from `index.html`)
+- `Nishil_Bhave_Senior_Software_Engineer.pdf` — the public resume PDF, linked from the bottom CTA. This is the one finished artifact intentionally exposed on GitHub Pages.
 - `README.md` — public-facing summary; mirrors a subset of this file
+
+**Resume working docs live in a separate private repo**, not this one. Canonical resume source (`master.md`), tailored variants, LinkedIn copy, and additional PDF exports all live at `~/Documents/work/resume/` (private GitHub repo `nishilbhave/resume`). The `resume-tailor` skill operates against that path, not this repo. The split is deliberate — this repo is public via GitHub Pages, so anything checked in is world-readable.
 
 ## Architecture
 
@@ -60,7 +58,7 @@ The blog section uses an HTTP fetch on page load. Skeleton shimmer placeholders 
 
 ## Editing Notes
 
-- The resume PDF served at the bottom is `resume/Nishil_Bhave_Senior_Backend_Dev.pdf`. If renamed or moved, update the `<a href>` accordingly.
+- The resume PDF served at the bottom is `Nishil_Bhave_Senior_Software_Engineer.pdf` at repo root. If renamed or moved, update the `<a href>` in `index.html` accordingly. To refresh it, regenerate from the private `resume` repo and copy the rendered PDF here.
 - The GitHub avatar URL is hard-coded: `https://avatars.githubusercontent.com/u/13285272?v=4`. Stable as long as the GitHub user ID doesn't change.
 - Service CTAs use `mailto:` with `subject=` and `body=` URL-encoded — keep encoding consistent if editing.
 - All three productized offer prices are intentionally hidden from the page (the user's choice). Don't add public pricing without confirming.
