@@ -26,7 +26,7 @@ python3 -m http.server 8765
 Single bento grid (`grid-cols-1 md:grid-cols-3 lg:grid-cols-4`, `auto-rows-[180px]`):
 
 1. **Hero** — Profile + Sivon HQ feature card
-2. **Stats strip** — 11 yrs / 3 SaaS / 10k subs / 29 agents
+2. **Stats strip** — 11 yrs / 3 products / 10k subs / 29 agents
 3. **Work with me** — SaaS MVP, Multi-agent, Fractional retainer
 4. **Proof** — StatusLink, MakeToCreate, Experience, GitHub repos
 5. **Latest writing** — 3 dynamic posts via WP REST API (with skeleton + fallback)
@@ -42,5 +42,7 @@ See [CLAUDE.md](./CLAUDE.md) for the full design system, brand personality, and 
 ## Files
 
 - `index.html` — entire site
-- `resume/Nishil_Bhave_Senior_Backend_Dev.pdf` — resume served from the bottom CTA
+- `Nishil_Bhave_Senior_Software_Engineer.pdf` — resume served from the bottom CTA
 - `CLAUDE.md` — project instructions and design context
+
+Resume working docs (master copy, LinkedIn copy, tailored variants) live in a separate private repo and are intentionally not tracked here.
